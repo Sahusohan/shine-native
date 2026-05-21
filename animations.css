@@ -1,0 +1,370 @@
+/* =========================================
+   SHINE NATIVE — Animations
+   ========================================= */
+
+/* =========================================
+   KEYFRAMES
+   ========================================= */
+@keyframes floatOrb {
+  0%, 100% { transform: translate(0, 0) scale(1); }
+  33%       { transform: translate(20px, -30px) scale(1.05); }
+  66%       { transform: translate(-15px, 20px) scale(0.97); }
+}
+
+@keyframes floatBadge {
+  0%, 100% { transform: translateY(0px); }
+  50%       { transform: translateY(-10px); }
+}
+
+@keyframes pulse {
+  0%, 100% { opacity: 1; transform: scale(1); }
+  50%       { opacity: 0.5; transform: scale(0.8); }
+}
+
+@keyframes marquee {
+  from { transform: translateX(0); }
+  to   { transform: translateX(-50%); }
+}
+
+@keyframes scrollLine {
+  0%   { left: -100%; }
+  100% { left: 100%; }
+}
+
+@keyframes fadeInUp {
+  from {
+    opacity: 0;
+    transform: translateY(36px);
+  }
+  to {
+    opacity: 1;
+    transform: translateY(0);
+  }
+}
+
+@keyframes fadeInLeft {
+  from {
+    opacity: 0;
+    transform: translateX(-36px);
+  }
+  to {
+    opacity: 1;
+    transform: translateX(0);
+  }
+}
+
+@keyframes fadeInRight {
+  from {
+    opacity: 0;
+    transform: translateX(36px);
+  }
+  to {
+    opacity: 1;
+    transform: translateX(0);
+  }
+}
+
+@keyframes scaleIn {
+  from {
+    opacity: 0;
+    transform: scale(0.92);
+  }
+  to {
+    opacity: 1;
+    transform: scale(1);
+  }
+}
+
+@keyframes shimmer {
+  0%   { background-position: -200% center; }
+  100% { background-position: 200% center; }
+}
+
+@keyframes cardFloat {
+  0%, 100% { transform: translateY(0px) rotate(0deg); }
+  25%       { transform: translateY(-8px) rotate(0.5deg); }
+  75%       { transform: translateY(-4px) rotate(-0.5deg); }
+}
+
+@keyframes glowPulse {
+  0%, 100% { box-shadow: 0 0 20px rgba(201,168,76,0.2); }
+  50%       { box-shadow: 0 0 40px rgba(201,168,76,0.4); }
+}
+
+/* =========================================
+   SCROLL REVEAL SYSTEM
+   ========================================= */
+.reveal {
+  opacity: 0;
+  transform: translateY(32px);
+  transition: opacity 0.7s cubic-bezier(0.25, 0.46, 0.45, 0.94),
+              transform 0.7s cubic-bezier(0.25, 0.46, 0.45, 0.94);
+}
+
+.reveal.revealed {
+  opacity: 1;
+  transform: translateY(0);
+}
+
+.reveal--delay-1 {
+  transition-delay: 0.12s;
+}
+
+.reveal--delay-2 {
+  transition-delay: 0.24s;
+}
+
+.reveal--delay-3 {
+  transition-delay: 0.36s;
+}
+
+.reveal--delay-4 {
+  transition-delay: 0.48s;
+}
+
+/* Left/Right reveal variants */
+.reveal--left {
+  transform: translateX(-32px);
+}
+
+.reveal--left.revealed {
+  transform: translateX(0);
+}
+
+.reveal--right {
+  transform: translateX(32px);
+}
+
+.reveal--right.revealed {
+  transform: translateX(0);
+}
+
+/* Scale reveal variant */
+.reveal--scale {
+  transform: scale(0.92);
+}
+
+.reveal--scale.revealed {
+  transform: scale(1);
+}
+
+/* =========================================
+   HERO ENTRANCE — auto-plays on load
+   ========================================= */
+.hero .reveal {
+  animation: fadeInUp 0.9s cubic-bezier(0.25, 0.46, 0.45, 0.94) forwards;
+  opacity: 0;
+}
+
+.hero .reveal--delay-1 {
+  animation-delay: 0.15s;
+}
+
+.hero .reveal--delay-2 {
+  animation-delay: 0.3s;
+}
+
+.hero .reveal--delay-3 {
+  animation-delay: 0.45s;
+}
+
+.hero .reveal--delay-4 {
+  animation-delay: 0.6s;
+}
+
+/* =========================================
+   HOVER EFFECTS
+   ========================================= */
+
+/* Nav link underline slide */
+.nav-links a {
+  position: relative;
+}
+
+/* Prop card image zoom on parent hover — handled in style.css */
+
+/* Service card border glow */
+.service-card:hover {
+  animation: glowPulse 2s ease-in-out infinite;
+}
+
+/* Filter button ripple */
+.filter-btn {
+  position: relative;
+  overflow: hidden;
+}
+
+.filter-btn::after {
+  content: '';
+  position: absolute;
+  inset: 0;
+  background: rgba(28,28,30,0.05);
+  transform: scale(0);
+  border-radius: inherit;
+  transition: transform 0.3s ease;
+}
+
+.filter-btn:hover::after {
+  transform: scale(1);
+}
+
+/* =========================================
+   LOADING / PAGE TRANSITION
+   ========================================= */
+.page-loader {
+  position: fixed;
+  inset: 0;
+  background: var(--charcoal);
+  z-index: 10000;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  flex-direction: column;
+  gap: 20px;
+  transition: opacity 0.6s ease, visibility 0.6s ease;
+}
+
+.page-loader.hidden {
+  opacity: 0;
+  visibility: hidden;
+}
+
+.loader-logo {
+  font-family: 'Playfair Display', Georgia, serif;
+  font-size: 2.4rem;
+  font-weight: 700;
+  color: #F5F0E8;
+  letter-spacing: -0.02em;
+}
+
+.loader-logo span {
+  color: #C9A84C;
+}
+
+.loader-bar {
+  width: 200px;
+  height: 2px;
+  background: rgba(245,240,232,0.15);
+  border-radius: 2px;
+  overflow: hidden;
+}
+
+.loader-progress {
+  height: 100%;
+  background: linear-gradient(90deg, #C9A84C, #E8C96A);
+  border-radius: 2px;
+  width: 0%;
+  transition: width 0.1s linear;
+  animation: loadProgress 1.2s cubic-bezier(0.4, 0, 0.2, 1) forwards;
+}
+
+@keyframes loadProgress {
+  0%   { width: 0%; }
+  60%  { width: 70%; }
+  100% { width: 100%; }
+}
+
+/* =========================================
+   FORM SUCCESS STATE
+   ========================================= */
+.form-success {
+  display: none;
+  text-align: center;
+  padding: 48px 32px;
+}
+
+.form-success.show {
+  display: block;
+  animation: fadeInUp 0.6s ease forwards;
+}
+
+.form-success .success-icon {
+  font-size: 3rem;
+  margin-bottom: 16px;
+}
+
+.form-success h3 {
+  font-size: 1.6rem;
+  color: var(--charcoal);
+  margin-bottom: 12px;
+}
+
+.form-success p {
+  color: var(--warm-gray);
+  font-size: 0.95rem;
+}
+
+/* =========================================
+   STAT NUMBER ANIMATION
+   ========================================= */
+.stat-num {
+  display: inline-block;
+  transition: transform 0.3s ease;
+}
+
+/* =========================================
+   MOBILE MENU LINK STAGGER
+   ========================================= */
+.mobile-menu li {
+  transform: translateY(30px);
+  opacity: 0;
+  transition: transform 0.4s ease, opacity 0.4s ease;
+}
+
+.mobile-menu.open li:nth-child(1) { transition-delay: 0.1s; transform: translateY(0); opacity: 1; }
+.mobile-menu.open li:nth-child(2) { transition-delay: 0.2s; transform: translateY(0); opacity: 1; }
+.mobile-menu.open li:nth-child(3) { transition-delay: 0.3s; transform: translateY(0); opacity: 1; }
+.mobile-menu.open li:nth-child(4) { transition-delay: 0.4s; transform: translateY(0); opacity: 1; }
+.mobile-menu.open li:nth-child(5) { transition-delay: 0.5s; transform: translateY(0); opacity: 1; }
+
+/* =========================================
+   PROPERTY CARD FILTER ANIMATION
+   ========================================= */
+.prop-card {
+  transition: opacity 0.4s ease, transform 0.4s ease, box-shadow 0.4s ease;
+}
+
+.prop-card.hidden {
+  opacity: 0;
+  pointer-events: none;
+  transform: scale(0.95) translateY(10px);
+}
+
+/* =========================================
+   SMOOTH GRADIENT TEXT
+   ========================================= */
+.gradient-text {
+  background: linear-gradient(135deg, #C9A84C, #E8C96A, #C9A84C);
+  background-size: 200% auto;
+  -webkit-background-clip: text;
+  -webkit-text-fill-color: transparent;
+  background-clip: text;
+  animation: shimmer 3s linear infinite;
+}
+
+/* =========================================
+   REDUCED MOTION
+   ========================================= */
+@media (prefers-reduced-motion: reduce) {
+  *,
+  *::before,
+  *::after {
+    animation-duration: 0.01ms !important;
+    animation-iteration-count: 1 !important;
+    transition-duration: 0.01ms !important;
+  }
+
+  .reveal {
+    opacity: 1;
+    transform: none;
+  }
+
+  .hero .reveal {
+    animation: none;
+    opacity: 1;
+  }
+
+  .marquee-track {
+    animation: none;
+  }
+}
