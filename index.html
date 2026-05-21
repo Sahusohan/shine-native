@@ -1,0 +1,594 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+  <title>Shine Native — Premium Real Estate</title>
+  <meta name="description" content="Shine Native Real Estate — Discover extraordinary homes that reflect who you truly are. Premium properties, native living." />
+  <link rel="stylesheet" href="css/style.css" />
+  <link rel="stylesheet" href="css/animations.css" />
+  <link rel="preconnect" href="https://fonts.googleapis.com" />
+  <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin />
+  <link href="https://fonts.googleapis.com/css2?family=Playfair+Display:ital,wght@0,400;0,600;0,700;1,400;1,600&family=DM+Sans:wght@300;400;500&family=Cormorant+Garamond:ital,wght@0,300;0,400;1,300;1,400&display=swap" rel="stylesheet" />
+</head>
+<body>
+
+  <!-- CURSOR -->
+  <div class="cursor" id="cursor"></div>
+  <div class="cursor-follower" id="cursorFollower"></div>
+
+  <!-- NAV -->
+  <nav class="nav" id="nav">
+    <div class="nav-inner">
+      <a href="#" class="logo">
+        <span class="logo-mark">✦</span>
+        <span class="logo-text">Shine<em>Native</em></span>
+      </a>
+      <ul class="nav-links">
+        <li><a href="#properties">Properties</a></li>
+        <li><a href="#services">Services</a></li>
+        <li><a href="#about">About</a></li>
+        <li><a href="#testimonials">Stories</a></li>
+        <li><a href="#contact" class="nav-cta">Contact Us</a></li>
+      </ul>
+      <button class="hamburger" id="hamburger" aria-label="Menu">
+        <span></span><span></span><span></span>
+      </button>
+    </div>
+  </nav>
+
+  <!-- MOBILE MENU -->
+  <div class="mobile-menu" id="mobileMenu">
+    <ul>
+      <li><a href="#properties" class="mobile-link">Properties</a></li>
+      <li><a href="#services" class="mobile-link">Services</a></li>
+      <li><a href="#about" class="mobile-link">About</a></li>
+      <li><a href="#testimonials" class="mobile-link">Stories</a></li>
+      <li><a href="#contact" class="mobile-link">Contact</a></li>
+    </ul>
+  </div>
+
+  <!-- HERO -->
+  <section class="hero" id="hero">
+    <div class="hero-bg">
+      <div class="hero-orb hero-orb--1"></div>
+      <div class="hero-orb hero-orb--2"></div>
+      <div class="hero-grid"></div>
+    </div>
+    <div class="hero-content">
+      <div class="hero-badge reveal">
+        <span class="badge-dot"></span>
+        Premium Real Estate · Est. 2015
+      </div>
+      <h1 class="hero-title reveal reveal--delay-1">
+        Find Where <br /><em>You Truly</em><br /> Belong
+      </h1>
+      <p class="hero-sub reveal reveal--delay-2">
+        Curated homes in the world's most coveted locations.<br />
+        Rooted in heritage. Alive with possibility.
+      </p>
+      <div class="hero-actions reveal reveal--delay-3">
+        <a href="#properties" class="btn btn--primary">Explore Listings</a>
+        <a href="#about" class="btn btn--ghost">Our Story</a>
+      </div>
+      <div class="hero-stats reveal reveal--delay-4">
+        <div class="stat">
+          <span class="stat-num" data-count="1200">0</span><span class="stat-plus">+</span>
+          <span class="stat-label">Properties Sold</span>
+        </div>
+        <div class="stat-divider"></div>
+        <div class="stat">
+          <span class="stat-num" data-count="98">0</span><span class="stat-plus">%</span>
+          <span class="stat-label">Client Satisfaction</span>
+        </div>
+        <div class="stat-divider"></div>
+        <div class="stat">
+          <span class="stat-num" data-count="12">0</span><span class="stat-plus">+</span>
+          <span class="stat-label">Years Experience</span>
+        </div>
+      </div>
+    </div>
+    <div class="hero-visual reveal reveal--delay-2">
+      <div class="hero-card">
+        <div class="hero-card-img">
+          <div class="property-image property-image--hero"></div>
+          <div class="card-badge-price">$4,250,000</div>
+        </div>
+        <div class="hero-card-body">
+          <div class="card-location">
+            <span class="pin">📍</span> Malibu, California
+          </div>
+          <h3 class="card-title">Cliffside Ocean Estate</h3>
+          <div class="card-meta">
+            <span>5 Beds</span>
+            <span class="dot">·</span>
+            <span>4 Baths</span>
+            <span class="dot">·</span>
+            <span>4,800 sqft</span>
+          </div>
+        </div>
+      </div>
+      <div class="hero-float-badge">
+        <span class="float-icon">🏡</span>
+        <div>
+          <strong>New Listing</strong>
+          <p>Ocean View</p>
+        </div>
+      </div>
+    </div>
+    <div class="hero-scroll-hint">
+      <span>Scroll to explore</span>
+      <div class="scroll-line"></div>
+    </div>
+  </section>
+
+  <!-- MARQUEE -->
+  <div class="marquee-band">
+    <div class="marquee-track">
+      <span>Luxury Living</span><span class="mx">✦</span>
+      <span>Native Roots</span><span class="mx">✦</span>
+      <span>Prime Locations</span><span class="mx">✦</span>
+      <span>Dream Homes</span><span class="mx">✦</span>
+      <span>Trusted Agents</span><span class="mx">✦</span>
+      <span>Luxury Living</span><span class="mx">✦</span>
+      <span>Native Roots</span><span class="mx">✦</span>
+      <span>Prime Locations</span><span class="mx">✦</span>
+      <span>Dream Homes</span><span class="mx">✦</span>
+      <span>Trusted Agents</span><span class="mx">✦</span>
+    </div>
+  </div>
+
+  <!-- PROPERTIES -->
+  <section class="properties section" id="properties">
+    <div class="container">
+      <div class="section-header">
+        <div class="section-tag reveal">Featured Properties</div>
+        <h2 class="section-title reveal reveal--delay-1">Homes Worth<br /><em>Falling For</em></h2>
+        <p class="section-sub reveal reveal--delay-2">Each property is hand-selected for its character, location, and timeless appeal.</p>
+      </div>
+
+      <!-- Filters -->
+      <div class="filters reveal">
+        <button class="filter-btn active" data-filter="all">All</button>
+        <button class="filter-btn" data-filter="residential">Residential</button>
+        <button class="filter-btn" data-filter="luxury">Luxury</button>
+        <button class="filter-btn" data-filter="commercial">Commercial</button>
+      </div>
+
+      <div class="properties-grid">
+
+        <div class="prop-card reveal" data-category="luxury">
+          <div class="prop-img">
+            <div class="property-image property-image--1"></div>
+            <div class="prop-tag">Luxury</div>
+            <div class="prop-fav">♡</div>
+          </div>
+          <div class="prop-body">
+            <div class="prop-location">📍 Beverly Hills, CA</div>
+            <h3 class="prop-title">The Hillcrest Manor</h3>
+            <div class="prop-meta">
+              <span>🛏 6 Beds</span>
+              <span>🚿 5 Baths</span>
+              <span>📐 6,200 sqft</span>
+            </div>
+            <div class="prop-footer">
+              <span class="prop-price">$7,800,000</span>
+              <a href="#contact" class="prop-btn">View Details</a>
+            </div>
+          </div>
+        </div>
+
+        <div class="prop-card reveal reveal--delay-1" data-category="residential">
+          <div class="prop-img">
+            <div class="property-image property-image--2"></div>
+            <div class="prop-tag">Residential</div>
+            <div class="prop-fav">♡</div>
+          </div>
+          <div class="prop-body">
+            <div class="prop-location">📍 Austin, TX</div>
+            <h3 class="prop-title">Lakefront Modern Villa</h3>
+            <div class="prop-meta">
+              <span>🛏 4 Beds</span>
+              <span>🚿 3 Baths</span>
+              <span>📐 3,400 sqft</span>
+            </div>
+            <div class="prop-footer">
+              <span class="prop-price">$1,950,000</span>
+              <a href="#contact" class="prop-btn">View Details</a>
+            </div>
+          </div>
+        </div>
+
+        <div class="prop-card reveal reveal--delay-2" data-category="luxury">
+          <div class="prop-img">
+            <div class="property-image property-image--3"></div>
+            <div class="prop-tag">Luxury</div>
+            <div class="prop-fav">♡</div>
+          </div>
+          <div class="prop-body">
+            <div class="prop-location">📍 Aspen, CO</div>
+            <h3 class="prop-title">Alpine Glass Retreat</h3>
+            <div class="prop-meta">
+              <span>🛏 5 Beds</span>
+              <span>🚿 4 Baths</span>
+              <span>📐 4,100 sqft</span>
+            </div>
+            <div class="prop-footer">
+              <span class="prop-price">$5,200,000</span>
+              <a href="#contact" class="prop-btn">View Details</a>
+            </div>
+          </div>
+        </div>
+
+        <div class="prop-card reveal" data-category="residential">
+          <div class="prop-img">
+            <div class="property-image property-image--4"></div>
+            <div class="prop-tag">Residential</div>
+            <div class="prop-fav">♡</div>
+          </div>
+          <div class="prop-body">
+            <div class="prop-location">📍 Charleston, SC</div>
+            <h3 class="prop-title">Heritage Row Townhouse</h3>
+            <div class="prop-meta">
+              <span>🛏 3 Beds</span>
+              <span>🚿 2 Baths</span>
+              <span>📐 2,100 sqft</span>
+            </div>
+            <div class="prop-footer">
+              <span class="prop-price">$890,000</span>
+              <a href="#contact" class="prop-btn">View Details</a>
+            </div>
+          </div>
+        </div>
+
+        <div class="prop-card reveal reveal--delay-1" data-category="commercial">
+          <div class="prop-img">
+            <div class="property-image property-image--5"></div>
+            <div class="prop-tag">Commercial</div>
+            <div class="prop-fav">♡</div>
+          </div>
+          <div class="prop-body">
+            <div class="prop-location">📍 Manhattan, NY</div>
+            <h3 class="prop-title">Midtown Creative Loft</h3>
+            <div class="prop-meta">
+              <span>🏢 Open Plan</span>
+              <span>🚿 2 Baths</span>
+              <span>📐 2,800 sqft</span>
+            </div>
+            <div class="prop-footer">
+              <span class="prop-price">$3,100,000</span>
+              <a href="#contact" class="prop-btn">View Details</a>
+            </div>
+          </div>
+        </div>
+
+        <div class="prop-card reveal reveal--delay-2" data-category="luxury">
+          <div class="prop-img">
+            <div class="property-image property-image--6"></div>
+            <div class="prop-tag">Luxury</div>
+            <div class="prop-fav">♡</div>
+          </div>
+          <div class="prop-body">
+            <div class="prop-location">📍 Miami Beach, FL</div>
+            <h3 class="prop-title">Oceanfront Penthouse</h3>
+            <div class="prop-meta">
+              <span>🛏 4 Beds</span>
+              <span>🚿 4 Baths</span>
+              <span>📐 3,900 sqft</span>
+            </div>
+            <div class="prop-footer">
+              <span class="prop-price">$6,500,000</span>
+              <a href="#contact" class="prop-btn">View Details</a>
+            </div>
+          </div>
+        </div>
+
+      </div>
+      <div class="text-center reveal">
+        <a href="#contact" class="btn btn--primary btn--lg">View All Listings</a>
+      </div>
+    </div>
+  </section>
+
+  <!-- SERVICES -->
+  <section class="services section" id="services">
+    <div class="services-bg">
+      <div class="services-orb"></div>
+    </div>
+    <div class="container">
+      <div class="section-header">
+        <div class="section-tag reveal">What We Offer</div>
+        <h2 class="section-title reveal reveal--delay-1">Full-Spectrum<br /><em>Real Estate</em> Services</h2>
+      </div>
+      <div class="services-grid">
+        <div class="service-card reveal">
+          <div class="service-icon">🏠</div>
+          <h3>Buy a Home</h3>
+          <p>We guide you through every step — from discovery to keys in hand. Our agents know every neighborhood inside out.</p>
+          <a href="#contact" class="service-link">Learn More →</a>
+        </div>
+        <div class="service-card reveal reveal--delay-1">
+          <div class="service-icon">💰</div>
+          <h3>Sell Your Property</h3>
+          <p>Strategic pricing, professional staging, and targeted marketing to get you the best offer in record time.</p>
+          <a href="#contact" class="service-link">Learn More →</a>
+        </div>
+        <div class="service-card reveal reveal--delay-2">
+          <div class="service-icon">📋</div>
+          <h3>Property Management</h3>
+          <p>Hands-off ownership, hands-on care. We handle tenants, maintenance, and financials so you don't have to.</p>
+          <a href="#contact" class="service-link">Learn More →</a>
+        </div>
+        <div class="service-card reveal">
+          <div class="service-icon">📊</div>
+          <h3>Investment Advisory</h3>
+          <p>Data-driven insights on the most profitable markets. We help you build a portfolio that grows with confidence.</p>
+          <a href="#contact" class="service-link">Learn More →</a>
+        </div>
+        <div class="service-card reveal reveal--delay-1">
+          <div class="service-icon">🔑</div>
+          <h3>Rental Services</h3>
+          <p>Long-term and short-term rental solutions for landlords and tenants alike. Seamless, reliable, transparent.</p>
+          <a href="#contact" class="service-link">Learn More →</a>
+        </div>
+        <div class="service-card reveal reveal--delay-2">
+          <div class="service-icon">🌿</div>
+          <h3>Relocation Support</h3>
+          <p>Moving cities or countries? Our relocation specialists ensure your transition feels like coming home.</p>
+          <a href="#contact" class="service-link">Learn More →</a>
+        </div>
+      </div>
+    </div>
+  </section>
+
+  <!-- ABOUT -->
+  <section class="about section" id="about">
+    <div class="container about-grid">
+      <div class="about-visual reveal">
+        <div class="about-img-stack">
+          <div class="about-img about-img--main property-image property-image--about1"></div>
+          <div class="about-img about-img--secondary property-image property-image--about2"></div>
+          <div class="about-badge-float">
+            <strong>✦ 12</strong>
+            <span>Years of Native Excellence</span>
+          </div>
+        </div>
+      </div>
+      <div class="about-content">
+        <div class="section-tag reveal">Our Story</div>
+        <h2 class="section-title reveal reveal--delay-1">More Than <em>Property</em><br />We Find You Home</h2>
+        <p class="about-text reveal reveal--delay-2">
+          Shine Native was born from a belief that real estate is deeply personal — that the right home doesn't just shelter you, it shapes you. Founded in 2015 by a team of passionate local experts, we've helped over a thousand families find places where they truly belong.
+        </p>
+        <p class="about-text reveal reveal--delay-2">
+          We combine sharp market intelligence with genuine human care. Every client is a long-term relationship, not a transaction. That's the Shine Native difference.
+        </p>
+        <div class="about-features reveal reveal--delay-3">
+          <div class="about-feature">
+            <span class="feature-check">✓</span>
+            <span>Personalized property matching</span>
+          </div>
+          <div class="about-feature">
+            <span class="feature-check">✓</span>
+            <span>Transparent pricing — no hidden fees</span>
+          </div>
+          <div class="about-feature">
+            <span class="feature-check">✓</span>
+            <span>Local expertise in 20+ markets</span>
+          </div>
+          <div class="about-feature">
+            <span class="feature-check">✓</span>
+            <span>Award-winning agent team</span>
+          </div>
+        </div>
+        <a href="#contact" class="btn btn--primary reveal reveal--delay-4">Meet Our Team</a>
+      </div>
+    </div>
+  </section>
+
+  <!-- TESTIMONIALS -->
+  <section class="testimonials section" id="testimonials">
+    <div class="container">
+      <div class="section-header">
+        <div class="section-tag reveal">Client Stories</div>
+        <h2 class="section-title reveal reveal--delay-1">Words That<br /><em>Mean the World</em></h2>
+      </div>
+      <div class="testimonials-track" id="testimonialsTrack">
+
+        <div class="testi-card">
+          <div class="testi-stars">★★★★★</div>
+          <p class="testi-text">"Shine Native didn't just find us a house — they found us a community. Our agent understood exactly what we needed before we even knew ourselves. The process was seamless and joyful."</p>
+          <div class="testi-author">
+            <div class="testi-avatar testi-avatar--1"></div>
+            <div>
+              <strong>Sarah & James Mitchell</strong>
+              <span>Purchased in Austin, TX</span>
+            </div>
+          </div>
+        </div>
+
+        <div class="testi-card">
+          <div class="testi-stars">★★★★★</div>
+          <p class="testi-text">"We sold our Malibu home in 11 days above asking price. Their marketing was exceptional, their staging advice spot-on, and their communication throughout was outstanding."</p>
+          <div class="testi-author">
+            <div class="testi-avatar testi-avatar--2"></div>
+            <div>
+              <strong>Daniel Okafor</strong>
+              <span>Sold in Malibu, CA</span>
+            </div>
+          </div>
+        </div>
+
+        <div class="testi-card">
+          <div class="testi-stars">★★★★★</div>
+          <p class="testi-text">"As a first-time buyer I was terrified. The Shine Native team held my hand through everything and I ended up with an incredible home under budget. Truly life-changing experience."</p>
+          <div class="testi-author">
+            <div class="testi-avatar testi-avatar--3"></div>
+            <div>
+              <strong>Priya Nair</strong>
+              <span>Purchased in Charleston, SC</span>
+            </div>
+          </div>
+        </div>
+
+        <div class="testi-card">
+          <div class="testi-stars">★★★★★</div>
+          <p class="testi-text">"The investment portfolio they built for us has appreciated by 34% in two years. Their market insights and proactive management have been exceptional. We trust Shine Native completely."</p>
+          <div class="testi-author">
+            <div class="testi-avatar testi-avatar--4"></div>
+            <div>
+              <strong>Marcus & Elena Reyes</strong>
+              <span>Investors, Miami FL</span>
+            </div>
+          </div>
+        </div>
+
+      </div>
+      <div class="testi-controls">
+        <button class="testi-btn" id="testiPrev">←</button>
+        <div class="testi-dots" id="testiDots"></div>
+        <button class="testi-btn" id="testiNext">→</button>
+      </div>
+    </div>
+  </section>
+
+  <!-- CTA BAND -->
+  <section class="cta-band">
+    <div class="cta-bg">
+      <div class="cta-orb"></div>
+    </div>
+    <div class="container">
+      <h2 class="cta-title reveal">Ready to Find <em>Your Place</em>?</h2>
+      <p class="cta-sub reveal reveal--delay-1">Schedule a free consultation and let us do the searching for you.</p>
+      <a href="#contact" class="btn btn--white reveal reveal--delay-2">Book a Free Call</a>
+    </div>
+  </section>
+
+  <!-- CONTACT -->
+  <section class="contact section" id="contact">
+    <div class="container contact-grid">
+      <div class="contact-info">
+        <div class="section-tag reveal">Get in Touch</div>
+        <h2 class="section-title reveal reveal--delay-1">Let's Start<br /><em>Your Journey</em></h2>
+        <p class="reveal reveal--delay-2">Whether you're buying, selling, or investing — we're here to listen first.</p>
+
+        <div class="contact-details reveal reveal--delay-3">
+          <div class="contact-item">
+            <span class="contact-icon">📞</span>
+            <div>
+              <strong>Phone</strong>
+              <a href="tel:+18005746283">+1 (800) 574-6283</a>
+            </div>
+          </div>
+          <div class="contact-item">
+            <span class="contact-icon">✉️</span>
+            <div>
+              <strong>Email</strong>
+              <a href="mailto:hello@shinenative.com">hello@shinenative.com</a>
+            </div>
+          </div>
+          <div class="contact-item">
+            <span class="contact-icon">📍</span>
+            <div>
+              <strong>Office</strong>
+              <span>1240 Sunset Blvd, Los Angeles, CA 90028</span>
+            </div>
+          </div>
+        </div>
+
+        <div class="contact-socials reveal reveal--delay-4">
+          <a href="#" class="social-btn">Instagram</a>
+          <a href="#" class="social-btn">LinkedIn</a>
+          <a href="#" class="social-btn">Facebook</a>
+        </div>
+      </div>
+
+      <form class="contact-form reveal reveal--delay-2" id="contactForm" novalidate>
+        <div class="form-row">
+          <div class="form-group">
+            <label for="fname">First Name</label>
+            <input type="text" id="fname" name="fname" placeholder="Jane" required />
+          </div>
+          <div class="form-group">
+            <label for="lname">Last Name</label>
+            <input type="text" id="lname" name="lname" placeholder="Doe" required />
+          </div>
+        </div>
+        <div class="form-group">
+          <label for="email">Email Address</label>
+          <input type="email" id="email" name="email" placeholder="jane@example.com" required />
+        </div>
+        <div class="form-group">
+          <label for="interest">I'm interested in...</label>
+          <select id="interest" name="interest">
+            <option value="">Select a service</option>
+            <option>Buying a Home</option>
+            <option>Selling a Property</option>
+            <option>Investment Advisory</option>
+            <option>Property Management</option>
+            <option>Rental Services</option>
+            <option>Relocation Support</option>
+          </select>
+        </div>
+        <div class="form-group">
+          <label for="message">Message</label>
+          <textarea id="message" name="message" rows="4" placeholder="Tell us about your dream property..."></textarea>
+        </div>
+        <button type="submit" class="btn btn--primary btn--full">Send Message ✦</button>
+        <p class="form-note">We typically respond within 2 business hours.</p>
+      </form>
+    </div>
+  </section>
+
+  <!-- FOOTER -->
+  <footer class="footer">
+    <div class="container">
+      <div class="footer-top">
+        <div class="footer-brand">
+          <a href="#" class="logo logo--footer">
+            <span class="logo-mark">✦</span>
+            <span class="logo-text">Shine<em>Native</em></span>
+          </a>
+          <p>Where extraordinary homes meet the people who deserve them.</p>
+        </div>
+        <div class="footer-links-group">
+          <h4>Company</h4>
+          <ul>
+            <li><a href="#about">About Us</a></li>
+            <li><a href="#services">Services</a></li>
+            <li><a href="#properties">Properties</a></li>
+            <li><a href="#testimonials">Client Stories</a></li>
+          </ul>
+        </div>
+        <div class="footer-links-group">
+          <h4>Services</h4>
+          <ul>
+            <li><a href="#contact">Buy a Home</a></li>
+            <li><a href="#contact">Sell Property</a></li>
+            <li><a href="#contact">Investment</a></li>
+            <li><a href="#contact">Property Mgmt</a></li>
+          </ul>
+        </div>
+        <div class="footer-links-group">
+          <h4>Connect</h4>
+          <ul>
+            <li><a href="#">Instagram</a></li>
+            <li><a href="#">LinkedIn</a></li>
+            <li><a href="#">Facebook</a></li>
+            <li><a href="mailto:hello@shinenative.com">Email Us</a></li>
+          </ul>
+        </div>
+      </div>
+      <div class="footer-bottom">
+        <p>© 2025 Shine Native Real Estate. All rights reserved.</p>
+        <div class="footer-legal">
+          <a href="#">Privacy Policy</a>
+          <a href="#">Terms of Service</a>
+        </div>
+      </div>
+    </div>
+  </footer>
+
+  <script src="js/main.js"></script>
+</body>
+</html>

@@ -1,0 +1,15 @@
+# Shine Native — GitHub Pages Configuration
+title: Shine Native Real Estate
+description: Premium Real Estate — Find where you truly belong.
+baseurl: ""
+url: ""
+
+# Build settings
+markdown: kramdown
+
+# Exclude from processing
+exclude:
+  - README.md
+  - .gitignore
+  - Gemfile
+  - Gemfile.lock
